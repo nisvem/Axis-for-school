@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ось-2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="jquery.color.js"></script>
+
+
+<body>
+	<div class="main"> 
+		<div id="parent">
+			<div class="number" id="a"></div>
+			<div class="number">+</div>
+			<div class="number" id="b"></div>
+			<div class="number">=</div>
+			<div class="number" id="sum">?</div>
+		</div>
+		<div id="answer">
+			<div id="answer1"></div>
+			<div id="answer2"></div>
+			<svg version="1.1"  id="myCanvas" width="875" height="200">
+	 			<defs>
+			        <marker id="pointer" markerWidth="8" markerHeight="6" 
+						refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+					    <polyline points="0 0, 8 3, 0 6"/>
+					</marker>
+				</defs> 
+			</svg>
+		</div>
+</div>
+	<script  type="text/javascript" src="script.js"></script>
+</body>
+</html>

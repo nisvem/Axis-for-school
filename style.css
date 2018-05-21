@@ -1,0 +1,106 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-size: 35px;
+	font-family: Open Sans;
+}
+
+#myCanvas {
+	background: url(sprite.png) no-repeat bottom;
+	margin: auto;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#parent{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 300px;
+	margin: 50px auto;
+}
+
+.number{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	width: 30px;
+	height: 40px;
+}
+
+path {
+    fill: none;
+    stroke: #B95989;
+    stroke-width: 2;
+}
+
+polyline {
+    stroke-width: 0;
+	fill: #B95989;
+	animation: vis 1s linear;
+}
+
+@keyframes vis {
+  0% {opacity: 0;}
+  65% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+path{
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 2s linear forwards;
+}
+
+@keyframes dash {
+  0% {stroke-dashoffset: 1000;}
+  100% {stroke-dashoffset: 0;}
+}
+
+#answer{
+	width: 875px;
+	height: 200px;
+	margin: auto;
+}
+
+input {
+	border-radius: 5px;
+	border:2px solid #C0BABE;
+	text-align: center;
+	outline:none;
+}
+#sum {
+	width: 50px;
+}
+#sum input {
+	height: 40px;
+	width: 46px;
+}
+
+#answer1 input, #answer2 input {
+	display: flex;
+	align-self: center;	
+	align-items: center;
+	font-size: 25px;
+	width: 22px;
+	height: 28px;
+}
+#answer1, #answer2 {
+	display: inline-flex;
+	justify-content: center;
+	align-items:center;
+	position: relative;
+	width: 40px;
+	font-size: 25px;
+	opacity: 0;
+	animation: showNumber 1s linear forwards;
+}
+
+@keyframes showNumber {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
